@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Acknowledgement</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		<div class="data">My Data</div>
+		
+		<script>
+			$(document).ready(function(){
+				/*var myData = localStorage['objectToPass'];
+				localStorage.removeItem( 'objectToPass' ); // Clear the localStorage
+				var firstData = myData[0];
+				var secondData = myData[1];
+				console.log('firstData: ' + firstData + '\nsecondData: ' + secondData);*/
+				
+				
+				
+				//////////////////////////////////////////
+				var data = localStorage.getItem("object_name");
+				console.log(data);
+				localStorage.clear(); //clean the localstorage
+				var value1 = JSON.parse(data).key1;
+				var value2 = JSON.parse(data).key2;
+				var value3 = JSON.parse(data).key3;
+				console.log(value1);
+				console.log(value2);
+				console.log(value3);
+				
+				$('.data').text(value1 + " " + value2 + " " + value3);
+				console.log("localStorage : ");
+				console.log(localStorage);
+			});
+		</script>
+	</body>
+</html>

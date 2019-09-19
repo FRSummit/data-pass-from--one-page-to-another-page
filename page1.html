@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Acknowledgement</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<p>Data Passing</p>
+		<a href='page2.html'>Click To Navigate</a>
+		
+		<script>
+			$(document).ready(function(){
+				/*var firstData = {
+					'key1' : 'value1',
+					'key2' : 'value2'
+				};
+				var secondData = {
+					'key1' : 'value3',
+					'key2' : 'value4'
+				};
+				var myData = [ firstData, secondData ];
+				console.log(myData);
+				localStorage.setItem( 'objectToPass', myData );*/
+				
+				
+				////////////////////////////////////////////////
+				var data = {'key1':'Fayazur','key2':'Rahman','key3':'Summit'};
+				console.log(data);
+				localStorage.setItem("object_name",JSON.stringify(data));
+				console.log("localStorage : ");
+				console.log(localStorage);
+			});
+		</script>
+	</body>
+</html>
