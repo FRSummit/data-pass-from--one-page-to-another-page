@@ -7,6 +7,7 @@
 	
 	<body>
 		<div class="data">My Data</div>
+		<div class="data2">My Data</div>
 		
 		<script>
 			$(document).ready(function(){
@@ -20,8 +21,8 @@
 				
 				//////////////////////////////////////////
 				var data = localStorage.getItem("object_name");
-				console.log(data);
-				localStorage.clear(); //clean the localstorage
+				console.log('data : ' + data);
+				//localStorage.clear(); //clean the localstorage
 				var value1 = JSON.parse(data).key1;
 				var value2 = JSON.parse(data).key2;
 				var value3 = JSON.parse(data).key3;
@@ -30,6 +31,21 @@
 				console.log(value3);
 				
 				$('.data').text(value1 + " " + value2 + " " + value3);
+				console.log("localStorage : ");
+				console.log(localStorage);
+				
+				//////////////////////////////////////////
+				var data2 = localStorage.getItem("testObject");
+				console.log('data2 : ' + data2);
+				localStorage.clear(); //clean the localstorage
+				var value1_2 = JSON.parse(data2).key1;
+				var value2_2 = JSON.parse(data2).key2;
+				var value3_2 = JSON.parse(data2).key3;
+				console.log(value1_2);
+				console.log(value2_2);
+				console.log(value3_2);
+				
+				$('.data2').text(value1_2 + " " + value2_2 + " " + value3_2);
 				console.log("localStorage : ");
 				console.log(localStorage);
 			});

@@ -6,7 +6,16 @@
 	</head>
 	<body>
 		<p>Data Passing</p>
-		<a href='page2.html'>Click To Navigate</a>
+		
+		<div>
+			<p class="f-name" style="display: inline-block;">FAYAZUR</p>
+			<p class="m-name" style="display: inline-block;">RAHMAN</p>
+			<p class="l-name" style="display: inline-block;">SUMMIT</p>
+		</div>
+		
+		<div>
+			<a href='page2.html'>Click To Navigate</a>
+		</div>
 		
 		<script>
 			$(document).ready(function(){
@@ -24,6 +33,17 @@
 				
 				
 				////////////////////////////////////////////////
+				var fName = $('.f-name').text();
+				var mName = $('.m-name').text();
+				var lName = $('.l-name').text();
+				console.log("Name : " + fName + ' ' + mName + ' ' + lName);
+				
+				var nameData = {'key1':fName,'key2':mName,'key3':lName};
+				console.log("Named Data : " + nameData);
+				localStorage.setItem('testObject', JSON.stringify(nameData));	// Put the object into storage
+				var retrievedObject = localStorage.getItem('testObject');	// Retrieve the object from storage
+				console.log('retrievedObject: ', JSON.parse(retrievedObject));
+				
 				var data = {'key1':'Fayazur','key2':'Rahman','key3':'Summit'};
 				console.log(data);
 				localStorage.setItem("object_name",JSON.stringify(data));
